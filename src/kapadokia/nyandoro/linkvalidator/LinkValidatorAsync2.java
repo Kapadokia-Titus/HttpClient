@@ -1,5 +1,6 @@
 package kapadokia.nyandoro.linkvalidator;
 
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -7,11 +8,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class LinkValidatorAsync {
+public class LinkValidatorAsync2 {
     //initialize HTTPClient
     private static HttpClient client;
 
@@ -19,19 +21,24 @@ public class LinkValidatorAsync {
     public static void main (String [] args) throws IOException {
         // create an httpClient;
         // newHttpClient() - gives us a httpClient with all default settings
-        client =  HttpClient.newHttpClient();
+        // newHttpClient() - gives us a httpClient with all default settings
+        client =  HttpClient.newBuilder()
+                .connectTimeout(Duration.ofSeconds(3))
+                .followRedirects(HttpClient.Redirect.NORMAL)
+                .build();
+
 
         // the below piece of code ensures that later on all the requests are executed in parallel
         // and we get back the list of completable futures that represents completable result.
-        var futures =Files.lines(Path.of("urls.txt"))
-                .map(LinkValidatorAsync::validateLink)
+        var requests =Files.lines(Path.of("urls.txt"))
+                .map(LinkValidatorAsync2::validateLink)
                 .collect(Collectors.toList());
 
         //ensuring that the program doesn't end before the list of completable futures
         //are asynchronously completed
         // we do this by mapping completable future join over each completable future
         // that we got back from the validate link method
-        futures.stream()
+        requests.stream()
                 .map(CompletableFuture::join)
                 .forEach(System.out::println);
 
@@ -41,13 +48,14 @@ public class LinkValidatorAsync {
     // returns a completable future of string
     private static CompletableFuture<String> validateLink(String link){
         HttpRequest request = HttpRequest.newBuilder(URI.create(link))
+                .timeout(Duration.ofSeconds(2))
                 .GET()
                 .build();
 
 
 
         return client.sendAsync(request, HttpResponse.BodyHandlers.discarding())
-                .thenApply(LinkValidatorAsync::responseToString)
+                .thenApply(LinkValidatorAsync2::responseToString)
                 .exceptionally(e ->String.format("%s -> %s" ,link, false));
     }
 
