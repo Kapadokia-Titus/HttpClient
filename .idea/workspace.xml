@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75e01d06-20f2-4bf4-a8f9-fa9e3724c952" name="Default Changelist" comment="" />
+    <list default="true" id="75e01d06-20f2-4bf4-a8f9-fa9e3724c952" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kapadokia/nyandoro/linkvalidator/LinkValidatorAsync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urls.txt" beforeDir="false" afterPath="$PROJECT_DIR$/urls.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +22,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1e8GSn4caincHaHU12yklMwDcE7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,6 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -35,7 +47,20 @@
       <recent name="C:\Users\user\IdeaProjects\LinkValidator\src\kapadokia\nyandoro\linkvalidator" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LinkValidatorAsync">
+    <configuration name="LinkValidatorAsync" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kapadokia.nyandoro.linkvalidator.LinkValidatorAsync" />
+      <module name="LinkValidator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kapadokia.nyandoro.linkvalidator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinkValidatorSync" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kapadokia.nyandoro.linkvalidator.LinkValidatorSync" />
       <module name="LinkValidator" />
@@ -51,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LinkValidatorAsync" />
         <item itemvalue="Application.LinkValidatorSync" />
       </list>
     </recent_temporary>
@@ -73,21 +99,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593697333928" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1593697419791">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1593699811967">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593697419791" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1593697419791">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593699811967" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1593699811967">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593697419791" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1593697419790">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593699811967" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1593699811966">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593697419790" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1593697419791">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593699811966" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1593699811967">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593697419791" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593699811967" />
   </component>
 </project>
